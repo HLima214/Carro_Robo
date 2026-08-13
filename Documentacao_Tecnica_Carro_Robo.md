@@ -130,3 +130,12 @@ O croqui abaixo representa a concepção atual do chassi, incluindo as quatro ro
 As dimensões apresentadas são de concepção e devem ser refinadas a partir dos componentes comerciais efetivamente selecionados. Em especial, os padrões de furação dos motores, dimensões da bateria, placa controladora e drivers ainda precisam ser definidos para que o chassi passe de um modelo conceitual para uma peça pronta para fabricação.
 
 Documento preparado a partir do croqui e dos requisitos fornecidos para o protótipo.
+
+
+## Integrantes
+
+- Anny Carolina - RM98295
+- Eric Carvalho - RM550249
+- Henrique Lima - RM551528
+- Pedro Menezes - RM97432
+- Renato Izumi – RM99242
