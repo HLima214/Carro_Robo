@@ -131,6 +131,20 @@ As dimensões apresentadas são de concepção e devem ser refinadas a partir do
 
 Documento preparado a partir do croqui e dos requisitos fornecidos para o protótipo.
 
+## 11. Dimensões dos Componentes
+
+A tabela abaixo apresenta as dimensões dos principais componentes utilizados
+na construção do carro robô.
+
+| Componente | Comprimento | Largura | Altura | Fixação |
+|---|---:|---:|---:|---|
+| Motor Esquerdo | 70,25 mm | 36,6 mm | 22,70 mm | Cola quente / Dupla face |
+| Motor Direito | 70,25 mm | 36,6 mm | 22,70 mm | Cola quente / Dupla face |
+| Ponte H | 44,4 mm | 47,4 mm | 29 mm | Cola quente / Dupla face |
+| Sensor | 44,75 mm | 19,6 mm | 15 mm | Cola quente / Dupla face |
+| Bateria | 66 mm | 18 mm | 18 mm | Cola quente / Dupla face |
+| Arduino | 68,3 mm | 52,2 mm | 13,5 mm | Cola quente / Dupla face |
+
 
 ## Integrantes
 
