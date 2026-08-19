@@ -145,6 +145,10 @@ na construção do carro robô.
 | Bateria | 66 mm | 18 mm | 18 mm | Cola quente / Dupla face |
 | Arduino | 68,3 mm | 52,2 mm | 13,5 mm | Cola quente / Dupla face |
 
+## 12. Diagrama de ligações e posição dos componentes
+
+![Diagrama]("Diagrama.ligacoes.png")
+
 
 ## Integrantes
 
