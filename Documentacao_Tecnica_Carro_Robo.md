@@ -147,7 +147,7 @@ na construção do carro robô.
 
 ## 12. Diagrama de ligações e posição dos componentes
 
-![Diagrama]("Diagrama.ligacoes.png")
+![Diagrama](Diagrama.ligacoes.png)
 
 
 ## Integrantes
