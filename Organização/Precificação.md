@@ -6,7 +6,7 @@ Esta documentação apresenta uma estimativa dos custos necessários para constr
 
 Os valores são baseados em preços médios encontrados em lojas brasileiras de eletrônica e robótica em agosto de 2026. Os valores podem sofrer alterações de acordo com fornecedor, promoção e frete.
 
-
+---
 
 ## 2. Componentes do projeto
 
@@ -24,7 +24,7 @@ Os valores são baseados em preços médios encontrados em lojas brasileiras de 
 | Material para carenagem                        |          1 |       R$ 35,00 |      R$ 35,00 |
 | **Total estimado**                             |            |                | **R$ 278,03** |
 
-
+---
 
 ## 3. Componentes opcionais
 
@@ -39,7 +39,7 @@ Os seguintes componentes fazem parte das funcionalidades futuras do projeto e n�
 | Componentes para monitoramento da bateria | 1 conjunto |       R$ 10,00 |
 | **Total opcional**                        |            |   **R$ 79,57** |
 
-
+---
 
 ## 4. Custo total
 
@@ -57,7 +57,7 @@ Recomenda-se reservar aproximadamente 10% para possíveis gastos adicionais:
 
 **R$ 305,83 — aproximadamente R$ 306,00**
 
-
+---
 
 ## 5. Projeto com funcionalidades futuras
 
@@ -73,7 +73,7 @@ Com uma reserva de aproximadamente 10%:
 
 **Aproximadamente R$ 395,00**
 
-
+---
 
 ## 6. Divisão do custo
 
@@ -86,7 +86,7 @@ Considerando os 5 integrantes do projeto:
 | Projeto completo           |   R$ 357,60 |       R$ 71,52 |
 | Projeto completo + reserva |   R$ 393,36 |       R$ 78,67 |
 
-
+---
 
 ## 7. Fontes de referência
 
@@ -99,7 +99,7 @@ Os valores foram baseados em preços encontrados em lojas brasileiras de compone
 
 Os preços devem ser conferidos novamente antes da compra, pois podem variar conforme disponibilidade, promoções e frete.
 
-
+---
 ## 8. Resumo
 
 | Descrição                      |         Valor |
