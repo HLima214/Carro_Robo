@@ -7,11 +7,17 @@
 #define ENA 5
 #define ENB 32   // ajuste conforme sua ligação (6 não é um pino válido de saída no ESP32)
 
+// SENSOR ULTRASSÔNICO
+#define TRIG 18
+#define ECHO 19
+
 void moveForward();
 void moveBackward();
 void turnLeft();
 void turnRight();
 void stopMotors();
+
+long getDistance();
 
 void setup() {
     pinMode(IN1, OUTPUT);
@@ -21,6 +27,10 @@ void setup() {
     pinMode(ENA, OUTPUT);
     pinMode(ENB, OUTPUT);
 
+    // CONFIGURAÇÃO DO SENSOR
+    pinMode(TRIG, OUTPUT);
+    pinMode(ECHO, INPUT);
+
     digitalWrite(ENA, HIGH); // habilita a ponte H (ou use PWM se quiser controlar velocidade)
     digitalWrite(ENB, HIGH);
 
@@ -29,6 +39,15 @@ void setup() {
 
 void loop() {
     Dabble.processInput();
+
+    // Verifica a distância do sensor
+    long distance = getDistance();
+
+    // Se houver um obstáculo muito próximo, para o carro
+    if (distance > 0 && distance <= 20) {
+        stopMotors();
+        return;
+    }
 
     if (GamePad.isUpPressed()) {
         moveForward();
@@ -45,6 +64,23 @@ void loop() {
     else {
         stopMotors();
     }
+}
+
+long getDistance() {
+
+    digitalWrite(TRIG, LOW);
+    delayMicroseconds(2);
+
+    digitalWrite(TRIG, HIGH);
+    delayMicroseconds(10);
+
+    digitalWrite(TRIG, LOW);
+
+    long duration = pulseIn(ECHO, HIGH, 30000);
+
+    long distance = duration * 0.034 / 2;
+
+    return distance;
 }
 
 void moveForward() {
