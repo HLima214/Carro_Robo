@@ -33,12 +33,6 @@ Desenvolver um carrinho-robô funcional, controlado remotamente via smartphone e
 
 ---
 
-## 📸 Foto do carrinho finalizado
-
-<!-- TODO: adicionar imagem final, ex: ![little mack](./docs/foto-final.jpg) -->
-
----
-
 ## 📂 Organização do repositório
 
 | Arquivo/Pasta | Descrição |
@@ -91,5 +85,13 @@ Código-fonte completo em `CodigoCarrinho.ino`.
 
 ## 🎬 Evidências finais
 
-* 📷 **Fotos do carrinho finalizado:** <!-- TODO -->
-* 🎥 **Vídeo de funcionamento:** `MicrosoftTeams-video.mp4`
+* 📷 **Fotos do carrinho finalizado:**
+<img width="3024" height="4032" alt="Image" src="https://github.com/user-attachments/assets/6dcb0c0e-8455-4fa4-af98-3e211c9a2363" />
+<img width="3024" height="4032" alt="Image (1)" src="https://github.com/user-attachments/assets/d5d2d46f-9073-4255-b777-d2407a25de92" />
+<img width="3024" height="4032" alt="Image (2)" src="https://github.com/user-attachments/assets/207f3182-05af-4fbb-8296-d0d24e22d4bb" />
+<img width="3024" height="4032" alt="Image (3)" src="https://github.com/user-attachments/assets/13176556-652d-41bc-a9f9-bde6f775c3c9" />
+
+
+
+
+
