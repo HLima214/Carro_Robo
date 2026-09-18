@@ -20,7 +20,6 @@
 
 ## 🎯 Objetivo
 
-<!-- TODO: 2-3 frases sobre o objetivo do projeto -->
 
 Desenvolver um carrinho-robô funcional, controlado remotamente via smartphone e capaz de detectar obstáculos em seu trajeto, integrando os conhecimentos de projeto mecânico, eletrônica e programação trabalhados na disciplina.
 
@@ -52,25 +51,19 @@ Desenvolver um carrinho-robô funcional, controlado remotamente via smartphone e
 
 ---
 
-## 📋 Requisitos, planejamento e evolução
-
-<!-- TODO: requisitos definidos, esboço/proposta inicial, MVP, backlog, principais decisões e mudanças ao longo do projeto -->
-
----
-
 ## 🛠️ Projeto mecânico e fabricação
 
-* **Chassi:** <!-- TODO: qual kit foi comprado (2WD ou 4WD), link do fornecedor -->
+* **Chassi:**
 * Peças montadas manualmente pela equipe
 * Motores soldados manualmente aos cabos de ligação
-* **Carenagem:** <!-- TODO: material e processo usado na carenagem -->
+* **Carenagem:**
 
 ---
 
 ## 🔌 Hardware e eletrônica
 
 * **Microcontrolador:** ESP32
-* **Ponte H:** <!-- TODO: L298N ou L293D? -->
+* **Ponte H:**
 * **Sensor:** ultrassônico HC-SR04 (detecção de obstáculos)
 * **Alimentação:** baterias de lítio 18650 / power bank
 * **Comunicação sem fio:** Bluetooth, via app Dabble no celular (ESP32 dispensa módulo HC-05/HM-10 separado)
@@ -82,7 +75,6 @@ Desenvolver um carrinho-robô funcional, controlado remotamente via smartphone e
 
 Código-fonte completo em `CodigoCarrinho.ino`.
 
-<!-- TODO: breve explicação de como o código funciona -->
 
 * **Controle dos motores:**
 * **Comunicação sem fio (Bluetooth/Dabble):**
@@ -92,9 +84,6 @@ Código-fonte completo em `CodigoCarrinho.ino`.
 
 ## 🧪 Testes e resultados
 
-| Teste | Esperado | Resultado | Ação |
-| :--- | :--- | :--- | :--- |
-| <!-- TODO --> | | | |
 
 **Resumo:** montamos as peças, codamos, testamos e o carrinho funcionou como esperado.
 
@@ -104,6 +93,3 @@ Código-fonte completo em `CodigoCarrinho.ino`.
 
 * 📷 **Fotos do carrinho finalizado:** <!-- TODO -->
 * 🎥 **Vídeo de funcionamento:** `MicrosoftTeams-video.mp4`
-* 📱 **Demonstração do controle remoto (app Dabble):** <!-- TODO -->
-* 📏 **Demonstração do sensor:** <!-- TODO -->
-* 🚀 **Instruções básicas de uso:** <!-- TODO -->
