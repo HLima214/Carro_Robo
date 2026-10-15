@@ -11,18 +11,29 @@
 #define TRIG_PIN 14
 #define ECHO_PIN 12
 #define DIST_MAX_CM 100
-#define INTERVALO_MS 100          // tem que ser igual à coleta (10 Hz)
-#define DISTANCIA_EMERGENCIA_CM 8 // segurança extra, independente da IA
+#define INTERVALO_MS 100
+#define DISTANCIA_EMERGENCIA_CM 8
 
 // ---- IA ----
 #define CONFIANCA_MINIMA 0.70
-#define CLASSIFICAR_A_CADA 5      // classifica a cada 5 amostras (0,5 s)
+#define CLASSIFICAR_A_CADA 5
+
+// ---- NOVO: manobra autônoma ----
+#define TEMPO_RE_MS 700
+#define TEMPO_VIRAR_MS 500
+
+enum EstadoManobra { MANOBRA_NENHUMA, MANOBRA_RE, MANOBRA_VIRAR };  
 
 static float features[EI_CLASSIFIER_DSP_INPUT_FRAME_SIZE];
 int amostrasColetadas = 0;
 int contadorClassificacao = 0;
 bool bloquearFrente = false;
 String classeAtual = "";
+
+EstadoManobra estadoManobra = MANOBRA_NENHUMA;  
+unsigned long inicioManobra = 0;                
+bool virarParaEsquerda = true;                  
+bool aguardarSoltarFrente = false;              
 
 void moveForward();
 void moveBackward();
@@ -31,6 +42,8 @@ void turnRight();
 void stopMotors();
 float medirDistanciaCm();
 void classificar();
+void iniciarManobra();    
+void executarManobra();   
 
 int ei_get_data(size_t offset, size_t length, float *out_ptr) {
     memcpy(out_ptr, features + offset, length * sizeof(float));
@@ -81,13 +94,30 @@ void loop() {
 
     // 3) Segurança: parada de emergência por distância
     bool emergencia = (distanciaAtual <= DISTANCIA_EMERGENCIA_CM);
-
-    // 4) Controle: o resultado da IA interfere no comportamento
     bool frenteBloqueada = bloquearFrente || emergencia;
 
+    //manobra em andamento -> ignora o GamePad até terminar
+    if (estadoManobra != MANOBRA_NENHUMA) {
+        executarManobra();
+        return;
+    }
+
+    //após a manobra, exige soltar o botão "frente" antes de voltar a andar
+    if (aguardarSoltarFrente && !GamePad.isUpPressed()) {
+        aguardarSoltarFrente = false;
+    }
+
+    // 4) Controle
     if (GamePad.isUpPressed()) {
-        if (frenteBloqueada) stopMotors();
-        else moveForward();
+        if (aguardarSoltarFrente) {
+            stopMotors();
+        }
+        else if (frenteBloqueada) {
+            iniciarManobra();   //em vez de só parar, inicia a manobra
+        }
+        else {
+            moveForward();
+        }
     }
     else if (GamePad.isDownPressed()) {
         moveBackward();
@@ -100,6 +130,44 @@ void loop() {
     }
     else {
         stopMotors();
+    }
+}
+
+
+void iniciarManobra() {
+    estadoManobra = MANOBRA_RE;
+    inicioManobra = millis();
+    moveBackward();
+    Serial.println("Manobra: dando re");
+}
+
+
+void executarManobra() {
+    unsigned long decorrido = millis() - inicioManobra;
+
+    if (estadoManobra == MANOBRA_RE) {
+        if (decorrido >= TEMPO_RE_MS) {
+            estadoManobra = MANOBRA_VIRAR;
+            inicioManobra = millis();
+            if (virarParaEsquerda) turnLeft(); else turnRight();
+            virarParaEsquerda = !virarParaEsquerda;  // alterna o lado a cada manobra
+            Serial.println("Manobra: virando");
+        }
+    }
+    else if (estadoManobra == MANOBRA_VIRAR) {
+        if (decorrido >= TEMPO_VIRAR_MS) {
+            stopMotors();
+            estadoManobra = MANOBRA_NENHUMA;
+
+            // Descarta a janela antiga (ela ainda diz "obstáculo") e recomeça a coletar
+            amostrasColetadas = 0;
+            contadorClassificacao = 0;
+            bloquearFrente = false;
+            classeAtual = "";
+
+            aguardarSoltarFrente = true;
+            Serial.println("Manobra concluida: controles liberados");
+        }
     }
 }
 
