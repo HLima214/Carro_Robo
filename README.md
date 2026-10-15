@@ -15,6 +15,7 @@
 * **Henrique Lima** — RM551528
 * **Pedro Menezes** — RM97432
 * **Renato Izumi** — RM99242
+* **Bernardo Rocha** - RM99209
 
 ---
 
@@ -224,6 +225,14 @@ A classe com **melhor resultado no teste foi `proximo_parado`** (F1 0,47) e a de
 
 * 📷 **Fotos do carrinho finalizado:**
 <img width="3024" height="4032" alt="Image" src="https://github.com/user-attachments/assets/6dcb0c0e-8455-4fa4-af98-3e211c9a2363" />
-<img width="3024" height="4032" alt="Image (1)" src="https://github.com/user-attachments/assets/d5d2d46f-9073-4255-b777-d2407a25de92" />
 <img width="3024" height="4032" alt="Image (2)" src="https://github.com/user-attachments/assets/207f3182-05af-4fbb-8296-d0d24e22d4bb" />
 <img width="3024" height="4032" alt="Image (3)" src="https://github.com/user-attachments/assets/13176556-652d-41bc-a9f9-bde6f775c3c9" />
+<img width="3023" height="4031" alt="FrenteCarrinho" src="https://github.com/user-attachments/assets/0da21f3c-d775-44b4-a974-d43bd471acbb" />
+<img width="3023" height="4031" alt="FrenteCarrinho2" src="https://github.com/user-attachments/assets/bab00e0a-f3e1-4179-b3f1-0e460d980665" />
+<img width="3023" height="4031" alt="SuperiorCarrinho" src="https://github.com/user-attachments/assets/347c14e5-0242-429a-bbf9-465052a4f801" />
+<img width="3023" height="4031" alt="LateralCarrinho" src="https://github.com/user-attachments/assets/aef7f344-5c42-4d79-9bbd-bd4fe23ebffe" />
+<img width="3023" height="4031" alt="TraseiraCarrinho" src="https://github.com/user-attachments/assets/5881b310-0b8b-4cdf-9622-d1de20007aab" />
+
+
+
+
