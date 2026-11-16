@@ -938,4 +938,4 @@ void loop() {
 | Arquivo/Pasta | Descrição |
 | :--- | :--- |
 | `Documentacao_Tecnica_LDR_Buzzer_LED.md` | Este documento |
-| `firmware/carrinho_ia_ldr/carrinho_ia_ldr.ino` | Firmware completo do carrinho com o módulo de luminosidade |
+| `Módulo Adicional - GS 2 semestre - CitizenTech/Códigos/codigocompletoLDR.ino` | Firmware completo do carrinho com o módulo de luminosidade |
