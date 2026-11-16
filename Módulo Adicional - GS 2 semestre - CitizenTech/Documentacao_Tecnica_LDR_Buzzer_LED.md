@@ -209,8 +209,6 @@ No `setup()`, o LED acende e o buzzer dá **um bip curto** na partida. Isso serv
 
 ## 5. Código-fonte completo
 
-Arquivo sugerido no repositório: `firmware/carrinho_ia_ldr/carrinho_ia_ldr.ino` (na Arduino IDE, a pasta e o arquivo `.ino` precisam ter o mesmo nome). As linhas novas estão marcadas com `// LDR`.
-
 > **Antes de compilar:** o firmware depende da biblioteca do Edge Impulse do **seu** modelo. Treine-o e instale-o seguindo a [seção 6](#6-treinamento-do-seu-próprio-modelo-edge-impulse) e ajuste a linha `#include <NOME_DO_SEU_PROJETO_inferencing.h>`.
 
 ```cpp
