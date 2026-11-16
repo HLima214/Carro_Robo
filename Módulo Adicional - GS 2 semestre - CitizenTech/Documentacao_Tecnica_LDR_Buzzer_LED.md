@@ -931,6 +931,12 @@ void loop() {
 
 ---
 
+## 13. Vídeo de Demonstração
+
+Vídeo de no máximo 6 minutos apresentando o problema abordado no contexto de CitizenTech,  explicando brevemente a solução implementada e demonstrando o robô funcionando na prática. O vídeo irá evidenciar o funcionamento do sensor adicional e as principais funcionalidades desenvolvidas.
+
+[Vídeo demonstrativo](https://youtu.be/1QQ8dDXSNdE)
+
 ## 📂 Arquivos adicionados ao repositório
 
 | Arquivo/Pasta | Descrição |
